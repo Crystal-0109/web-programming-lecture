@@ -1,0 +1,11 @@
+h3 {
+  font-style: italic;
+}
+.article {
+  font-size: 10pt;
+  font-weight: bold;
+}
+#txtCSS {
+  font-style: italic;
+  text-decoration: underline;
+}
