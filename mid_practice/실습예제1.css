@@ -1,0 +1,20 @@
+.box{
+  background-color: blue;
+  border-radius: round;
+  color: white;
+  border-radius: 10vw;
+  box-sizing: auto;
+  text-align: left;
+  padding: 2vw;
+  border: 2px solid;
+}
+
+p{
+  margin-bottom: -15px;
+}
+
+.box:hover{
+  transform: rotate(360deg);
+  background-color: yellow;
+  transition: transform 5s;
+}

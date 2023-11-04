@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      @font-face {
+        font-family: 'a고딕16 보통';
+            font-style: normal;
+            src: url(A고딕16.TTF) format('truetype');
+      }
+      :root {
+        font-size: 2vw;
+      }
+      body {
+        font-family: 'a고딕16 보통';
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+      }
+      .footer {
+        background-color: white;
+      }
+      .poster {
+        width: 60%;
+        height: 40rem;
+       
+        background-color: white; 
+        padding: 1rem;
+        margin: 0;
+      }
+      .year {
+        color: orange;
+        font-size: 4rem;
+        font-weight: 100rem;
+      }
+      .titlekor {
+        color: black;
+        font-size: 5rem;
+      }
+      .titleeng {
+        color: black;
+        font-size: 3rem;
+      }
+      .cate {
+        display: inline-block;
+        background-color: #56b995;
+        font-size: 1rem;
+        padding: 0.1em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        background: linear-gradient(-135deg, transparent 0.7rem, #56b995 0) right, linear-gradient(45deg, transparent 0.7rem, #56b995 0) left;
+        background-size: 90% 200%;
+        background-repeat: no-repeat;
+      }
+      .header {
+        display: grid;
+        grid-template-columns: auto auto;
+        height: 8rem;
+        grid-gap: 0.2rem; 
+      }
+      .section {
+        padding: 0.1rem;
+      }
+      .mainleft {
+        width: 50%;
+        float: left;
+        box-sizing: border-box;
+        padding-right: 0.2rem;
+        margin-top: 3rem;
+      }
+      .mainright {
+        width: 50%;
+        float: right;
+        box-sizing: border-box;
+        padding-left: 0.2rem;
+        margin-top: 3rem;
+      }
+      .beneleft {
+        position: relative;
+        top: -1.9rem;
+        box-sizing: content-box;
+        display: inline-block;
+      }
+      .beneright {
+        box-sizing: content-box;
+        display: inline-block;
+      }
+      .dote {
+        font-weight: 900; 
+        line-height: 1.2rem;
+      }
+      p {
+        text-size-adjust: auto;
+        font-size: 0.6rem;
+        zoom: 0.6;
+      }
+      table.oneline {
+        width: 100%;
+        border-top: 0.15rem solid #56b995;
+        border-collapse: collapse;
+        font-size: 0.9rem;
+        zoom: 0.5;
+      }
+      th.oneline, td.oneline {
+        border-bottom: 0.15rem solid #56b995;
+        border-left: 1px solid #56b995;
+        padding: 0.25rem;
+      }
+      th.oneline:first-child, td.oneline:first-child {
+      border-left: none;
+      }
+      table.schedule {
+        width: 100%;
+        padding: 0;
+        border-collapse: collapse;
+        font-size: 0.7rem;
+        zoom: 0.5;
+        border-spacing: 0;
+        margin: 0%;
+      }
+      tr.schedule {
+        text-align: center;
+        padding: 0;
+      }
+      td.schedule {
+        text-align: center;
+        padding: 0;
+      }
+      table.award {
+        width: 100%;
+        padding: 0;
+        border-collapse: collapse;
+        font-size: 0.9rem;
+        zoom: 0.5;
+        font-weight: 500;
+        border-spacing: 0;
+        border-top: 0.15rem solid #56b995;
+        border-bottom: 0.15rem solid #56b995;
+        border-left: none;
+      }
+      tr.award {
+        text-align: center;
+        padding: 0;
+      }
+      td.award {
+        text-align: center;
+        padding: 0;
+        border-bottom: 1px solid #56b995;
+        border-left: 1px solid #56b995;
+        padding: 0.25rem;
+      }
+      ul, li {
+        font-size: 0.6rem;
+        zoom: 0.7;
+        padding-left: 0.5em; 
+        margin-left: 0.5em;
+      }
+      .host {
+        vertical-align: middle;
+        display: inline-block;
+        color: #56b995;
+        font-size: 1.1rem;
+      }
+      .host2 {
+        width: 5rem;
+      }
+      .host3 {
+        width: 2.1rem;
+      }
+      p a {
+        text-decoration: none;
+        color: #56b995;
+      }
+      .num {
+        font-size: 1.1rem;
+        font-weight: 700;
+      }
+      .ps {
+        color: #a0b46d;
+        font-size: 0.8rem;
+      }
+      a:link a:visited{
+        color: #56b995;
+      }
+      .qr {
+        width:3rem;
+        float: right; 
+        border: 0.2rem solid #56b979; 
+        border-radius: 10%;
+      }
+      .lefttablepic {
+        width: 2.5rem;
+        border-radius: 1.5rem;
+      }
+      .righttablepic {
+        width: 4rem;
+        border-radius: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="poster">
+      <header> 
+        <div class="header"> <!-- 제목이랑 QR -->
+          <div class="section">
+            <p>
+              <span class="year">2023</span> <br>
+              <span class="titlekor">국방 AI 경진대회</span> <br>
+              <span class="titleeng">: <span style="color: orange;">M</span>ilitary <span style="color: orange;">AI C</span>ompetiti<span style="color: orange;">ON</span></span>
+            </p>
+          </div>
+          <div class="section">
+            <a href="https://maicon.kr/" target="_blank"><img src="mid_hw_img/qr.png" alt="qr" class="qr"></a>
+          </div>
+        </div>
+        <div class="header">
+          <div class="section" style="position: relative; top: 3rem; z-index: 2;"> <!-- 이미지 -->
+            <img src="mid_hw_img/01-1.png" alt="whereai" style="width: 20rem; margin: 0rem; padding: 0;">
+          </div>
+          <div class="section" style="position: relative; left: -2rem; top: -4rem; z-index: 1;">
+            <img src="mid_hw_img/03.png" alt="03.png그림" style="width: 12rem; margin: 0px; padding: 0; float: right;">
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="mainleft"> <!--왼쪽 부분-->
+          <p><span class="cate">참가신청</span> <span style="color: #56b995; font-size: 1rem;"><span class="num">&nbsp;2023</span>년 <span class="num">9</span>월 <span class="num">19</span>일 - <span class="num">10</span>월 <span class="num">12</span>일 까지</span></p>
+          <p style="margin-top: 2rem;"><span class="cate">모집대상</span> <span style="font-size: 0.7rem; color: #56b995;">&nbsp각 부문별 750명(총1,500명) 선착순 접수 마감</span></p>
+          <table class="oneline">
+            <tr class="oneline">
+                <td class="oneline" style="text-align: center; width: 6rem;">군 장병 부문</td>
+                <td class="oneline" style="padding-left: 0.6rem;">현역 장병(병사, 간부), 군무원</td>
+            </tr>
+          </table>
+          <p class="ps">※ 시상일('23.12.1.) 기준 현역 신분 유지</p>
+          <table class="oneline">
+            <tr class="oneline">
+                <td class="oneline" style="text-align: center; width: 6rem;">일반인 부문</td>
+                <td class="oneline" style="padding-left: 0.6rem;">대한민국 국적의 19세~29세 청년</td>
+            </tr>
+          </table>
+          <p class="ps">※ 1994. 1. 1. - 2004. 12. 31. 출생자에 한함</p>
+          <p style="margin-top: 2rem;"><span class="cate">신청방법</span> <span style="color: #56b995; font-size: 1rem;">&nbsp홈페이지 접수: <a href="https://maicon.kr" target="_blank">https://maicon.kr</a></span><span style="font-size: 0.6rem; color: #56b995;">(우측 상단 QR코드)</span></p>
+          <p style="margin-top: 2rem;"><span class="cate">대회일정</span></p>
+          <table class="schedule">
+            <tr class="schedule">
+              <td class="schedule"><img src="mid_hw_img/참가신청.png" alt="참가신청그림" class="lefttablepic"></td>
+              <td class="schedule dote" style="color: #56b995;">></td>
+              <td class="schedule"><img src="mid_hw_img/예선참가.png" alt="예선참가그림" class="lefttablepic"></td>
+              <td class="schedule dote" style="color: #56b995;">></td>
+              <td class="schedule"><img src="mid_hw_img/팀빌딩.png" alt="팀빌딩그림" class="lefttablepic"></td>
+              <td class="schedule dote" style="color: #56b995;">></td>
+              <td class="schedule"><img src="mid_hw_img/본선참가.png" alt="본선참가그림" class="lefttablepic"></td>
+              <td class="schedule dote" style="color: #56b995;">></td>
+              <td class="schedule"><img src="mid_hw_img/결과물제출.png" alt="결과물제출그림" class="lefttablepic"></td>
+              <td class="schedule dote" style="color: #56b995;">></td>
+              <td class="schedule"><img src="mid_hw_img/발표평가.png" alt="발표평가그림" class="lefttablepic"></td>
+              <td class="schedule dote" style="color: #56b995;">></td>
+              <td class="schedule"><img src="mid_hw_img/우수자선정.png" alt="우수자선정그림" class="lefttablepic"></td>
+            </tr>
+            <tr class="schedule">
+              <td class="schedule" style="color: #56b995;">참가 신청</td>
+              <td></td>
+              <td class="schedule" style="color: #56b995;">&nbsp예선 참가&nbsp</td>
+              <td></td>
+              <td class="schedule" style="color: #56b995;">팀 빌딩</td>
+              <td></td>
+              <td class="schedule" style="color: #56b995;">본선 참가</td>
+              <td></td>
+              <td class="schedule" style="color: #56b995;">결과물 제출</td>
+              <td></td>
+              <td class="schedule" style="color: #56b995;">&nbsp발표 평가&nbsp&nbsp</td>
+              <td></td>
+              <td class="schedule" style="color: #56b995;">우수자 선정</td>
+            </tr>
+            <tr class="schedule">
+              <td class="schedule" style="font-size: 0.6rem;">9.19.-10.12.</td>
+              <td></td>
+              <td class="schedule" style="font-size: 0.6rem;">10월 말</td>
+              <td></td>
+              <td class="schedule" style="font-size: 0.6rem;">11.3.-11.17.</td>
+              <td></td>
+              <td class="schedule" style="font-size: 0.6rem;">11.29.-12.1.</td>
+              <td></td>
+              <td class="schedule" style="font-size: 0.6rem;">11.29.-12.1.</td>
+              <td></td>
+              <td class="schedule" style="font-size: 0.6rem;">12.1.</td>
+              <td></td>
+              <td class="schedule" style="font-size: 0.6rem;">12.1.</td>
+            </tr>
+          </table>
+          <p style="font-size: 0.8rem;">
+            <span class="dote">· 예선 방식 | </span> 이론시험 + 코딩테스트 <br>
+            <span class="dote">· 본선 진출 규모 | </span>군 장병 부문 60명, 일반인 부문 60명 <br>
+            <span class="dote">· 팀 빌딩 규모 | </span>4인 1팀 기준으로 각 부문별 15팀
+          </p>
+          <p class="ps">※ 기타 세부사항은 홈페이지를 참고하여 주시기 바랍니다.</p>
+        </div>
+        <div class="mainright"> <!-- 오른쪽 부분 -->
+          <p><span class="cate">&nbsp시상식&nbsp</span> <span style="color: #56b995; font-size: 1rem;">&nbsp총 상금 8,200만원</span></p>
+          <p style="font-size: 0.8rem;"><span class="dote">· 시상 규모 | </span>국방부 장관상, 과기정통부 장관상 등 총 19점</p>
+          <table class="award">
+            <tr class="award" style="border-bottom: 0.15rem solid #56b995; background-color: #a2ead0;">
+              <td class="award" style="border-left: none;">부문</td>
+              <td class="award">구분</td>
+              <td class="award">훈격</td>
+              <td class="award">상금</td>
+              <td class="award">시상수</td>
+            </tr>
+            <tr class="award">
+              <td rowspan="5" class="award" style="border-left: none;">군 장병</td>
+              <td class="award">최우수상</td>
+              <td class="award">국방부 장관상</td>
+              <td class="award">2,000만원</td>
+              <td class="award">1</td>
+            </tr>
+            <tr class="award">
+              <td class="award">우수상</td>
+              <td class="award">정보통신기획평가원 원장상</td>
+              <td class="award">1,000만원</td>
+              <td class="award">1</td>
+            </tr>
+            <tr class="award">
+              <td class="award">장려상</td>
+              <td class="award">한국공개소프트웨어협회 협회장상</td>
+              <td class="award">500만원</td>
+              <td class="award">1</td>
+            </tr>
+            <tr class="award">
+              <td class="award">특별상</td>
+              <td class="award">후원기업상</td>
+              <td class="award">100만원</td>
+              <td class="award">4</td>
+            </tr>
+            <tr class="award">
+              <td class="award">특별상</td>
+              <td class="award">우수부대상</td>
+              <td class="award">100만원</td>
+              <td class="award">3</td>
+            </tr>
+            <tr class="award" style="border-top: 0.15rem solid #56b995;">
+              <td rowspan="4" class="award" style="border-left: none;">일반인</td>
+              <td class="award">최우수상</td>
+              <td class="award">과학기술정보통신부 장관상</td>
+              <td class="award">2,000만원</td>
+              <td class="award">1</td>
+            </tr>
+            <tr class="award">
+              <td class="award">우수상</td>
+              <td class="award">정보통신기획평가원 원장상</td>
+              <td class="award">1,000만원</td>
+              <td class="award">1</td>
+            </tr>
+            <tr class="award">
+              <td class="award">장려상</td>
+              <td class="award">한국공개소프트웨어협회 협회장상</td>
+              <td class="award">500만원</td>
+              <td class="award">1</td>
+            </tr>
+            <tr class="award">
+              <td class="award">특별상</td>
+              <td class="award">후원기업상</td>
+              <td class="award">100만원</td>
+              <td class="award">4</td>
+            </tr>
+          </table>
+          <p class="ps" style="color: black;">※ 주제 제안 우수 공모작상 2명 수여(시상금 각 50만원)</p>
+          <span class="beneleft">
+            <p class="cate">수상자 혜택</p>
+          </span>
+          <span class="beneright">
+            <table class="schedule">
+              <tr class="schedule"><span class="dote"></span>
+                <td class="schedule"><img src="mid_hw_img/전문가멘토링.png" alt="전문가멘토링그림" class="righttablepic"></td>
+                <td class="schedule dote" style="color: #56b995;">╋</td>
+                <td class="schedule"><img src="mid_hw_img/인턴십면접.png" alt="인턴십면접그림" class="righttablepic"></td>
+                <td class="schedule dote" style="color: #56b995;">╋</td>
+                <td class="schedule"><img src="mid_hw_img/sw교육연계.png" alt="SW교육연계그림" class="righttablepic"></td>
+                <td class="schedule dote" style="color: #56b995;">╋</td>
+                <td class="schedule"><img src="mid_hw_img/수상작갤러리.png" alt="수상작갤러리그림" class="righttablepic"></td>
+              </tr>
+              <tr class="schedule">
+                <td class="schedule" style="color: #56b995; font-size: 0.85rem;">전문가 멘토링</td>
+                <td></td>
+                <td class="schedule" style="color: #56b995; font-size: 0.85rem;">&nbsp&nbsp인턴십 면접&nbsp</td>
+                <td></td>
+                <td class="schedule" style="color: #56b995; font-size: 0.85rem;">&nbspSW교육 연계</td>
+                <td></td>
+                <td class="schedule" style="color: #56b995; font-size: 0.85rem;">수상작 갤러리</td>
+              </tr>
+            </table>
+          </span>
+          <p><span class="cate">&nbsp&nbsp&nbsp문의처&nbsp&nbsp&nbsp</span> <span style="font-size: 1rem; color: #56b995;">&nbsp국방 AI 경진대회 운영사무국</span></p> 
+          <p style="font-size: 0.8rem;">
+            <span class="dote">· 전화 | </span>02-6736-7419 <br>
+            <span class="dote">· 이메일 | </span>contact@maicon.kr
+          </p>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="host">  <!-- 위쪽 주최 주관-->
+          <p class="host">주최</p>
+          <a href="https://www.mnd.go.kr/mbshome/mbs/mnd/index.jsp" target="_blank"><img src="mid_hw_img/국방부.png" alt="국방부" class="host host2"></a>
+          <a href="https://www.msit.go.kr/index.do" target="_blank"><img src="mid_hw_img/과기정통부.png" alt="과기정통부" class="host host2"></a>
+          <p class="host" style="color: rgb(3, 85, 147);">&nbsp;&nbsp;주관</p>
+          <a href="https://www.iitp.kr/main.it" target="_blank"><img src="mid_hw_img/iitp.png" alt="iitp" class="host host2"></a>
+          <a href="https://www.kossa.kr/" target="_blank"><img src="mid_hw_img/kossa.png" alt="kossa" class="host host2"></a>
+        </div>
+        <div class="host"> <!-- 아래쪽 후원 -->
+          <p class="host">후원</p>
+          <a href="https://goorm.co/" target="_blank"><img src="mid_hw_img/goorm.png" alt="goorm" class="host host3"></a>
+          <a href="https://www.datamaker.io/?gclid=CjwKCAjwo9unBhBTEiwAipC112kPnhS9x5JP9hSJmTn90Q9s2B5yKWRJN0sfS-nPLf483G21fXHcehoCpHAQAvD_BwE" target="_blank"><img src="mid_hw_img/datamaker.png" alt="datamaker" class="host host3"></a>
+          <a href="https://bluevisor.kr/" target="_blank"><img src="mid_hw_img/bluevisor.png" alt="bluevisor" class="host host3"></a>
+          <a href="https://elice.io/?utm_source=google&utm_medium=cpc&utm_campaign=elice_io&gclid=CjwKCAjwo9unBhBTEiwAipC1113FnVUbUK_g4aiPaS38IVzZjkk_mLmwHidFFqQKzGuCgwuPzCqwWRoCsMYQAvD_BwE" target="_blank"><img src="mid_hw_img/elice.png" alt="elice" class="host host3"></a>
+          <a href="https://home.genesislab.ai/" target="_blank"><img src="mid_hw_img/genesislab.png" alt="genesislab" class="host host3"></a>
+          <a href="https://www.gendata.ai/" target="_blank"><img src="mid_hw_img/gendata.png" alt="gendata" class="host host3"></a>
+          <a href="https://www.cubrid.com/" target="_blank"><img src="mid_hw_img/cubrid.png" alt="cubrid" class="host host3"></a>
+          <a href="https://spartacodingclub.kr/" target="_blank"><img src="mid_hw_img/sparta.png" alt="sparta" class="host host3"></a>
+          <a href="https://www.deepnoid.com/" target="_blank"><img src="mid_hw_img/deepnoid.png" alt="deepnoid" class="host host3"></a>
+          <a href="https://codingon.co.kr/" target="_blank"><img src="mid_hw_img/codingon.png" alt="codingon" class="host host3"></a>
+          <a href="https://www.cogcom.kr/" target="_blank"><img src="mid_hw_img/cogcom.png" alt="cogcom" class="host host3"></a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

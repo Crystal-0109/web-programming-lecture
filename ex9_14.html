@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <form action="form_app.js" method="post">
+      <h3>도서 검색</h3>
+      <fieldset>
+        <legend>로그인</legend>
+        <label for="user_id">아이디 : </label>
+        <input type="text" name="id" size="20" id="user_id"><br>
+        <label for="user_pw">비밀번호 :</label>
+        <input type="password" name="pw" size="20" id="user_pw">
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend>통합 검색</legend>
+        <label for="book_name">도서명 :</label>
+        <input type="text" name="book_search" id="book_name" size="50"><br>
+        검색범위 :
+        <input type="radio" name="s_type" id="keyword" value="keyword">
+        <label for="keyword">키워드</label>
+        <input type="radio" name="s_type" id="maincontents" value="maincontents">
+        <label for="maincontents">본문내용</label><br>
+        자료유형 :
+        <input type="checkbox" name="d_type" value="all">전체
+        <input type="checkbox" name="d_type" value="단행본">단행본
+        <input type="checkbox" name="d_type" value="학술지">학술지
+        <input type="checkbox" name="d_type" value="비도서">비도서
+      </fieldset>
+      <br>
+      <button type="submit">검색</button>
+      <button type="reset">지우기</button>
+    </form>
+  </body>
+</html>

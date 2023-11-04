@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .box {
+        background-color: rgb(98, 114, 210);
+        color: white;
+        text-align: left;
+        border: 2px solid darkblue;
+        border-radius: 25px;
+        display: inline-block; 
+        transition: transform 5s, background-color 0.5s;
+        box-sizing: auto;
+        padding: 5px;
+        padding-right: 10px;
+      }
+      .box:hover {
+        transform: rotate(360deg);
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>
+        <ul>
+          문제 2번
+          <li>배경은 파란색</li>
+          <li>글자는 흰색</li>
+          <li>글은 왼쪽 정렬</li>
+          <li>테두리는 2, 모서리는 라운드 처리</li>
+          <li>박스 크기는 auto(default)</li>
+          <li>마우스 올리면 이벤트 발생 (5초 동안 360도 회전, 배경색 노랑색으로 변경)</li>
+        </ul>
+      </p>
+    </div>
+    
+  </body>
+</html>
